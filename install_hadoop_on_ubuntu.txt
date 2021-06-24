@@ -1,0 +1,20 @@
+1. start Docker
+2. download ubuntu image
+3. start ubuntu container
+4. apt-get update
+5. apt-get install vim & apt-get install wget
+6. apt-get install openjdk-8-jdk (java -version check)
+7. (setting environment variables) vi ~/.bashrc 
+8. write under 2 sentence
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export PATH="$PATH:$JAVA_HOME/bin"
+9. wget https://archive.apache.org/dist/hadoop/core/hadoop-1.2.1/hadoop-1.2.1.tar.gz
+10. tar -xvf hadoop-1.2.1.tar.gz
+11. go to hadoop-1.2.1/conf and set xml files
+12. apt-get install openssh-server
+13. ssh-keygen -t rsa (users can connect to localhost without password)
+14. service ssh start
+15. ssh localhost
+16. initializing namenode ==> ./bin/hadoop namenode -format
+17. start hadoop ==> ./bin/start-all.sh
+18. check hadoop ==> jps (you can see namenode, datanode, jps, jobtracker, tasktracker, secondarynamenode)
